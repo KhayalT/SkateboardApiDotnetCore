@@ -10,12 +10,11 @@ namespace DataAccess.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-72FTU3Q\SQLEXPRESS01;Database=Skateboard;Trusted_Connection=True");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-72FTU3Q\SQLEXPRESS01;Database=Skateboard;Trusted_Connection=true");
         }
 
         public DbSet<Skateboard> Skateboards { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<SkateboardType> SkateboardTypes { get; set; }
-        public DbSet<SkateboardColor> Skateboard_Colors { get; set; }
     }
 }

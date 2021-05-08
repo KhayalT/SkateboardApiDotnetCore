@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Business.Abstract;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,10 +8,26 @@ using System.Threading.Tasks;
 
 namespace WebApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class SkateboardController : ControllerBase
     {
+        ISkateboardService _skateboardService;
+
+        public SkateboardController(ISkateboardService skateboardService)
+        {
+            _skateboardService = skateboardService;
+        }
+        [Route("api/products")]
+        public IActionResult Get()
+        {
+            var result = _skateboardService.GetAllSkateboardDetails();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+
+        }
 
     }
 }

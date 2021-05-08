@@ -1,17 +1,17 @@
 ﻿using Core.Entities;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities.Concrete
+namespace Entities.DTOs
 {
-    public class Skateboard:IEntity
+    public class SkateboardDetailsDto:IDTO
     {
         public int SkateboardId { get; set; }
-        public int TypeId { get; set; }
-        public string Name { get; set; }
+        public string SkateboardName { get; set; }
         public decimal Price { get; set; }
         public decimal PrintPrice { get; set; }
-
+        public string SkateboardType { get; set; }
     }
 }
