@@ -16,5 +16,6 @@ namespace DataAccess.Concrete
         public DbSet<Skateboard> Skateboards { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<SkateboardType> SkateboardTypes { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }

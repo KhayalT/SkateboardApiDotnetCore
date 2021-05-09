@@ -30,8 +30,11 @@ namespace WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<ISkateboardService, SkateboardManager>();
-            services.AddSingleton<ISkateboardDal, EfSkateboardDal>();
+            //services.AddSingleton<ISkateboardService, SkateboardManager>();
+            //services.AddSingleton<IOrderService, OrderManager>();
+            //services.AddSingleton<IOrderDal, EfOrderDal>();
+            //services.AddSingleton<IColorDal, EfColorDal>();
+            //services.AddSingleton<ISkateboardDal, EfSkateboardDal>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
