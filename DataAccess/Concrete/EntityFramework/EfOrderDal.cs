@@ -2,6 +2,8 @@
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +21,6 @@ namespace DataAccess.Concrete.EntityFramework
                     .OrderByDescending(p=>p.OrderId).ToList();
             }
         }
+
     }
 }

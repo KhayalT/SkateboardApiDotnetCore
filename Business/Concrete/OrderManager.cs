@@ -7,6 +7,7 @@ using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,6 +50,17 @@ namespace Business.Concrete
         public IDataResult<List<Order>> GetAllWithOrderBy()
         {
             return new SuccessDataResult<List<Order>>(_orderDal.GetAllWithOrderBy());
+        }
+
+        public IDataResult<Order> GetOne(int orderId)
+        {
+            return new SuccessDataResult<Order>(_orderDal.GetByExp(p => p.OrderId == orderId));
+        }
+
+        public IResult Update(Order order)
+        {
+            _orderDal.Update(order);
+            return new SuccessResult("Updated Successfully");
         }
 
         private IResult CheckIfColorIdExists(int colorId)

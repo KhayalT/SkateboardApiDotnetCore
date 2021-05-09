@@ -17,6 +17,7 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(p => p.PhoneNumber).NotEmpty().When(p => p.Email == null);
             RuleFor(p => p.CustomPrintPhoto).MaximumLength(2048);
             RuleFor(p => p.Address).NotEmpty();
+         
         }
     }
 }
