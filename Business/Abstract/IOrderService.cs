@@ -10,5 +10,6 @@ namespace Business.Abstract
     {
         IResult Add(Order order);
         IDataResult<List<Order>> GetAll();
+        IDataResult<List<Order>> GetAllWithOrderBy();
     }
 }

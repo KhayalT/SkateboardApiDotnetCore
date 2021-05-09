@@ -23,7 +23,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var result = _orderService.GetAll();
+            var result = _orderService.GetAllWithOrderBy();
             if (result.Success)
             {
                 return Ok(result);

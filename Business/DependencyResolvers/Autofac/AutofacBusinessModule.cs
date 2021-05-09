@@ -12,7 +12,7 @@ using System.Text;
 
 namespace Business.DependencyResolvers.Autofac
 {
-    class AutofacBusinessModule:Module
+    public class AutofacBusinessModule:Module
     {
         protected override void Load(ContainerBuilder builder)
         {

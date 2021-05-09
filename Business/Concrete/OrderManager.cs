@@ -46,6 +46,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Order>>(_orderDal.GetAll());
         }
 
+        public IDataResult<List<Order>> GetAllWithOrderBy()
+        {
+            return new SuccessDataResult<List<Order>>(_orderDal.GetAllWithOrderBy());
+        }
+
         private IResult CheckIfColorIdExists(int colorId)
         {
             var result = _colorDal.GetAll(p => p.Id == colorId).Any();

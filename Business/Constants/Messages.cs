@@ -8,6 +8,6 @@ namespace Business.Constants
     {
         public static string SkateboardListed = "Skateboard is Listed";
 
-        public static string CredentialMessage = "This credentials doesn't match,Sorry!";
+        public static string CredentialMessage = "This is wrong Product or Color";
     }
 }
