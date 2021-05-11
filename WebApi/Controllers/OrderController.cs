@@ -23,6 +23,11 @@ namespace WebApi.Controllers
         {
             _orderService = orderService;
         }
+
+        /// <summary>
+        /// Listed All Order with order by latest
+        /// </summary>
+        /// <returns></returns>
         [Route("api/orders")]
         [HttpGet]
         public IActionResult Get()
@@ -34,6 +39,12 @@ namespace WebApi.Controllers
             }
             return BadRequest(result);
         }
+
+        /// <summary>
+        /// Stored Order
+        /// </summary>
+        /// <param name="order">Requested order</param>
+        /// <returns></returns>
         [Route("api/orders")]
         [HttpPost]
         public IActionResult Post(Order order)
@@ -45,6 +56,14 @@ namespace WebApi.Controllers
             }
             return BadRequest(result);
         }
+
+        /// <summary>
+        /// Updated Order only Preparation date and Delivery Date
+        /// </summary>
+        /// <param name="id">Order id</param>
+        /// <param name="order">Requested order</param>
+        /// <returns></returns>
+        [HttpPut]
         [Route("api/orders/{id}")]
         public IResult Put(int id, [FromBody] Order order)
         {

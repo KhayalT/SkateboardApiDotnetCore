@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:WebApi.Controllers.OrderController.Get">
+            <summary>
+            Listed All Order with order by latest
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.OrderController.Post(Entities.Concrete.Order)">
+            <summary>
+            Stored Order
+            </summary>
+            <param name="order">Requested order</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.OrderController.Put(System.Int32,Entities.Concrete.Order)">
+            <summary>
+            Updated Order only Preparation date and Delivery Date
+            </summary>
+            <param name="id">Order id</param>
+            <param name="order">Requested order</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.SkateboardController.Get">
+            <summary>
+            Listed All Skateboards with relation
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

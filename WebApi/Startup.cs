@@ -30,6 +30,7 @@ namespace WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSwaggerDocument();
             //services.AddSingleton<ISkateboardService, SkateboardManager>();
             //services.AddSingleton<IOrderService, OrderManager>();
             //services.AddSingleton<IOrderDal, EfOrderDal>();
@@ -48,6 +49,10 @@ namespace WebApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseOpenApi();
+
+            app.UseSwaggerUi3();
 
             app.UseAuthorization();
 

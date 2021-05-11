@@ -17,6 +17,11 @@ namespace WebApi.Controllers
         {
             _skateboardService = skateboardService;
         }
+
+        /// <summary>
+        /// Listed All Skateboards with relation
+        /// </summary>
+        /// <returns></returns>
         [Route("api/products")]
         public IActionResult Get()
         {
