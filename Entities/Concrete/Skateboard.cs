@@ -12,6 +12,7 @@ namespace Entities.Concrete
         public string Name { get; set; }
         public decimal Price { get; set; }
         public decimal PrintPrice { get; set; }
+        public List<SkateboardColor> SkateboardColors { get; set; }
 
     }
 }

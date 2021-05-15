@@ -13,5 +13,6 @@ namespace Entities.DTOs
         public decimal Price { get; set; }
         public decimal PrintPrice { get; set; }
         public string SkateboardType { get; set; }
+        public List<string> Colors { get; set; }
     }
 }
